@@ -21,4 +21,4 @@ len(Vector2d(x1, y1)) == 2
 Vector2d(x1, y1) @ Vector2d(x2, y2) == x1x2 + y1y2
 ```
 
-We need to have a property for getting the vector size and it should not writable (we only can read it).
+We need to have a property for getting the vector size and it should not be writable (we only can read it).
