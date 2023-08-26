@@ -83,4 +83,5 @@ and then for each operation you return a result in a single line:
 
 At end user close the connection with `exit`.
 
-**You must handle multiple connections at the same time**.
+- **You must handle multiple connections at the same time**.
+- **You must write two `client.py` and `server.py` for this.**
