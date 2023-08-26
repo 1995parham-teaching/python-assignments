@@ -20,6 +20,9 @@ class VectorND:
     def __str__(self) -> str:
         return f"{self.xs}"
 
+    def __repr__(self) -> str:
+        return f"{type(self).__name__}{self.xs}"
+
 
 class Vector2D(VectorND):
     def __init__(self, x: float, y: float):
@@ -33,6 +36,7 @@ class Vector2D(VectorND):
     def y(self) -> float:
         return self.xs[1]
 
+    @property
     def length(self) -> float:
         return (self.x**2 + self.y**2) ** 0.5
 
@@ -67,3 +71,7 @@ if __name__ == "__main__":
     assert v1 * v2 == Vector2D(0, 0)
     print(v1 + v2)
     assert v1 @ v2 == 0
+
+    vectors: list[Vector2D] = [Vector2D(i, i) for i in range(10)]
+    print(vectors)
+    print(list(filter(lambda v: v.length >= 2, vectors)))
